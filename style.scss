@@ -106,8 +106,6 @@ a {
         line-height: 14px;
         letter-spacing: 1.5px;
     }
-
-
 }
 
 .intro {
@@ -304,5 +302,105 @@ a {
         font-size: 14px;
         font-weight: 400;
         line-height: 16px;
+    }
+}
+
+// Ноутбук
+@media (max-width: 1279px) {
+    .header {
+        width: $desktop_S_narrow_content;
+    
+        &__logo {
+            margin-bottom: 48px;
+        }
+   
+        &__lang-list {
+            margin-bottom: 54px;
+        }
+    }
+
+    .main {
+        width: $desktop_S_narrow_content;
+    
+        &__subtitle {
+            padding-bottom: 56px;
+        }
+        
+        &__image {
+            width: 928px;
+        }
+    }
+}
+
+// Планшет
+@media (max-width: 1023px) {
+    .header {
+        width: $tablet_narrow_content;
+    }
+
+    .main {
+        width: $tablet_wide_content;
+        margin-bottom: 88px;
+        
+        &__image {
+            width: 768px;
+        }
+
+        &__caption {
+            margin-left: 24px;
+        }
+    }
+    
+}
+
+// Мобильный
+@media (max-width: 767px) {
+    .header {
+        width: $mobile_narrow_content;
+    
+        &__logo {
+            margin-top: 16px;
+        }
+    
+        &__logo-img {
+            width: 142px;
+        }
+    
+        &__lang-list {
+            margin-top: 30px;
+            margin-bottom: 56px;
+        }
+    
+        &__lang-link {
+            font-size: 18px;
+            line-height: 20px;
+        }
+    }
+
+    .main {
+        width: $mobile_wide_content;
+        margin-bottom: 64px;
+    
+        &__title {
+            max-width: 288px;
+            font-size: 40px;
+            line-height: 44px;
+            padding-bottom: 16px;
+        }
+    
+        &__subtitle {
+            max-width: 288px;
+            font-size: 16px;
+            line-height: 20px;
+            padding-bottom: 40px;
+        }
+        
+        &__image {
+            width: 320px;
+        }
+
+        &__caption {
+            margin-left: 16px;
+        }
     }
 }
