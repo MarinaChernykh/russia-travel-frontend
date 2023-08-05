@@ -160,24 +160,21 @@ a {
 
 .place {
     display: flex;
-    gap: 40px;
+    flex-direction: column;
+    gap: 48px;
     margin-bottom: 80px;
 
+    &__first-row {
+        display: flex;
+        align-items: flex-end;
+        gap: 40px;
+    }
+
     &__title {
+        width: 460px;
         font-size: 72px;
         font-weight: 900;
         line-height: 76px;
-        margin-bottom: 48px;
-    }
-
-    &__image {
-        width: 460px;
-    }
-
-    &__right-column {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
     }
 
     &__url-heading {
@@ -190,7 +187,7 @@ a {
     }
 
     &__link {
-        color: #FFF;
+        color: $basic_color;
         font-family: Inter;
         font-size: 18px;
         font-style: normal;
@@ -199,11 +196,20 @@ a {
         text-decoration-line: underline;
     }
 
+    &__second-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 32px;        
+    }
+
+    &__image {
+        width: 460px;
+    }
+
     &__text {
         display: flex;
         flex-direction: column;
         gap: 26px;
-        margin-top: 48px;
     };
 
     &__paragraph {
@@ -349,14 +355,16 @@ a {
     }
     
     .place {
-        gap: 32px;
+        &__first-row {
+            gap: 32px;
+        }
     
-        &__image {
+        &__title {
             width: 440px;
         }
     
-        &__text {
-            gap: 27px;
+        &__image {
+            width: 440px;
         }
     }
 
@@ -410,24 +418,27 @@ a {
     .places {
         width: $tablet_narrow_content;
     }
-    
+
     .place {
-        gap: 28px;
         margin-bottom: 73px;
     
+        &__first-row {
+            gap: 28px;
+        }
+    
         &__title {
+            width: 340px;
             font-size: 42px;
             line-height: 46px;
+        }
+    
+        &__second-row {
+            gap: 28px;        
         }
     
         &__image {
             width: 340px;
         }
-
-        &__text {
-            gap: 25px;
-            margin-top: 26px;
-        };
     
         &__paragraph {
             font-size: 16px;
@@ -528,33 +539,37 @@ a {
     .places {
         width: $mobile_wide_content;
     }
-    
+
     .place {
-        display: block;
+        gap: 32px;
         margin-bottom: 50px;
     
+        &__first-row {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 32px;
+            margin: 0 16px 0 16px;
+        }
+    
         &__title {
+            width: 288px;
             font-size: 32px;
             line-height: 35px;
-            margin: 0 16px 32px 16px;
+        }
+    
+        &__second-row {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 32px;  
         }
     
         &__image {
             width: 320px;
         }
     
-        &__right-column {
-            margin-left: 16px;
-            margin-right: 16px;
-        }
-    
-        &__text {
-            gap: 25px;
-            margin-top: 32px;
-        };
-    
         &__paragraph {
             font-size: 16px;
+            margin: 0 16px 0 16px;
         }
     }
 
@@ -588,6 +603,7 @@ a {
     
         &__navigation-list {
             display: block;
+            margin: 0 16px 0 16px;
             
         }
     
@@ -599,6 +615,7 @@ a {
         }
     
         &__copyright {
+            margin: 0 16px 0 16px;
             line-height: 14px;
         }
     }
